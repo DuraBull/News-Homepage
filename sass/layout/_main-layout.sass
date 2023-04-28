@@ -2,11 +2,13 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 1rem 0
+    max-width: 1100px
+    margin: 0 auto
+    padding: clamp(1rem, 8vw, 3rem) 0
 
 .logo
-    width: 45px
-    height: 28px
+    width: clamp(45px, 5vw, 65px )
+    height: clamp(28px, 3vw, 40px)
     margin: auto 0
 
 .ham-toggle
@@ -21,9 +23,9 @@
     font-size: 1.1rem
     font-weight: $font-regular
     display: flex
+    position: fixed
     flex-direction: column
     gap: 1.7rem
-    position: fixed
     z-index: 90
     right: -200%
     top: 0
@@ -34,19 +36,21 @@
     box-shadow: 0 0 100vw black
 
 .open
+    position: fixed
     
 
 .grid
     display: grid
-    gap: 1rem
-    margin-bottom: 4rem
+    gap: clamp(1rem, 4vw, 2rem)
+    max-width: 1100px
+    // grid-template-columns: repeat(auto-fit, minmax(333px, 1fr))
+    margin: 0 auto clamp(2.3rem, 8vw, 4rem)
 
 .hero
     background: no-repeat url("../images/image-web-3-mobile.jpg") 0/100%
     min-width: 280px
-    max-width: 686px
-    min-height: 300px
-    max-height: 600px
+    // max-width: 1200px
+    height: 300px
 
 .title
     padding-top: .3rem
@@ -54,35 +58,42 @@
 .new
     display: flex
     flex-direction: column
-    gap: 1.8rem
+    gap: clamp(1.8rem, 8vw, 1.9rem)
+    max-width: 340px
+    // max-height: 510px
     background: $vdark-blue
-    padding: 1.5rem
+    padding: clamp(1.5rem, 8vw, 2rem) 1.5rem
+    margin: 0 auto
     h2
         color: $soft-orange
-        font-size: 2rem
+        font-size: clamp(2rem, 8vw, 2.3rem)
         font-weight: $font-semi
 
 .new-art
     display: flex
     flex-direction: column
-    gap: .5rem
+    gap: clamp(.5rem, 8vw, .6rem)
     color: $off-white
     h3
         font-size: 1.2rem
+        &:hover
+            color: $soft-orange
     p
         color: $grayish-blue
 
 .top-articles
     display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
     gap: 2rem
-    margin-bottom: 4rem
+    max-width: 1100px
+    margin: clamp(0rem, 8vw, 2.5rem) auto 4rem
 
 .art
     display: flex
     gap: 1.5rem
     img
         width: 100px
-        height: 120px
+        height: clamp(120px, 12vw, 127px)
 
 .top-art-wrap
     display: flex
@@ -93,4 +104,6 @@
         font-size: 1.8rem
     h3
         font-weight: $font-extra
+        &:hover
+            color: $soft-red
 

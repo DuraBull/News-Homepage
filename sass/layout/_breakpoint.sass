@@ -1,0 +1,36 @@
+@media screen and (min-width: 800px)
+    .grid
+        margin: 0 auto 2rem
+
+    .hero
+        background: no-repeat url("../images/image-web-3-desktop.jpg") 0/cover
+        grid-column: 1 / span 2
+
+    .new
+        grid-row: 1 / span 2
+        grid-column: 3
+
+    .btn
+        margin-bottom: 0
+
+    .ham-toggle
+        display: none
+        
+    .nav-items
+        position: relative
+        font-size: 1rem
+        display: flex
+        flex-direction: row
+        gap: 2rem
+        color: $dark-grayish-blue
+        align-self: flex-start
+        z-index: 0
+        width: auto
+        height: auto
+        padding: 0
+        right: 0
+        box-shadow: none
+
+    .nav-item
+        &:hover
+            color: $soft-orange

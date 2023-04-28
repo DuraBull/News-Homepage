@@ -191,6 +191,10 @@ td, th {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -199,13 +203,18 @@ body {
 
 h1 {
   font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 p {
   color: hsl(236, 13%, 42%);
-  line-height: 1.6rem;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 hr {
@@ -216,12 +225,14 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(1rem, 8vw, 3rem) 0;
 }
 
 .logo {
-  width: 45px;
-  height: 28px;
+  width: clamp(45px, 5vw, 65px);
+  height: clamp(28px, 3vw, 40px);
   margin: auto 0;
 }
 
@@ -238,9 +249,9 @@ hr {
   font-size: 1.1rem;
   font-weight: 400;
   display: flex;
+  position: fixed;
   flex-direction: column;
   gap: 1.7rem;
-  position: fixed;
   z-index: 90;
   right: -200%;
   top: 0;
@@ -251,18 +262,21 @@ hr {
   box-shadow: 0 0 100vw black;
 }
 
+.open {
+  position: fixed;
+}
+
 .grid {
   display: grid;
-  gap: 1rem;
-  margin-bottom: 4rem;
+  gap: clamp(1rem, 4vw, 2rem);
+  max-width: 1100px;
+  margin: 0 auto clamp(2.3rem, 8vw, 4rem);
 }
 
 .hero {
   background: no-repeat url("../images/image-web-3-mobile.jpg") 0/100%;
   min-width: 280px;
-  max-width: 686px;
-  min-height: 300px;
-  max-height: 600px;
+  height: 300px;
 }
 
 .title {
@@ -272,24 +286,29 @@ hr {
 .new {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: clamp(1.8rem, 8vw, 1.9rem);
+  max-width: 340px;
   background: hsl(240, 100%, 5%);
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 8vw, 2rem) 1.5rem;
+  margin: 0 auto;
 }
 .new h2 {
   color: hsl(35, 77%, 62%);
-  font-size: 2rem;
+  font-size: clamp(2rem, 8vw, 2.3rem);
   font-weight: 600;
 }
 
 .new-art {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 8vw, 0.6rem);
   color: hsl(36, 100%, 99%);
 }
 .new-art h3 {
   font-size: 1.2rem;
+}
+.new-art h3:hover {
+  color: hsl(35, 77%, 62%);
 }
 .new-art p {
   color: hsl(233, 8%, 79%);
@@ -297,8 +316,10 @@ hr {
 
 .top-articles {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
+  max-width: 1100px;
+  margin: clamp(0rem, 8vw, 2.5rem) auto 4rem;
 }
 
 .art {
@@ -307,7 +328,7 @@ hr {
 }
 .art img {
   width: 100px;
-  height: 120px;
+  height: clamp(120px, 12vw, 127px);
 }
 
 .top-art-wrap {
@@ -322,12 +343,18 @@ hr {
 .top-art-wrap h3 {
   font-weight: 800;
 }
+.top-art-wrap h3:hover {
+  color: hsl(5, 85%, 63%);
+}
 
 .btn {
   background: hsl(5, 85%, 63%);
   padding: 0.9rem 2rem;
   border: none;
-  margin: 1.6rem 0 2.8rem;
+  margin: clamp(1.6rem, 8vw, 2.25rem) 0 2.8rem;
+}
+.btn:hover {
+  background: hsl(240, 100%, 5%);
 }
 .btn a {
   text-decoration: none;
@@ -335,4 +362,42 @@ hr {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+    margin: 0 auto 2rem;
+  }
+  .hero {
+    background: no-repeat url("../images/image-web-3-desktop.jpg") 0/cover;
+    grid-column: 1/span 2;
+  }
+  .new {
+    grid-row: 1/span 2;
+    grid-column: 3;
+  }
+  .btn {
+    margin-bottom: 0;
+  }
+  .ham-toggle {
+    display: none;
+  }
+  .nav-items {
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: hsl(236, 13%, 42%);
+    align-self: flex-start;
+    z-index: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    right: 0;
+    box-shadow: none;
+  }
+  .nav-item:hover {
+    color: hsl(35, 77%, 62%);
+  }
 }/*# sourceMappingURL=main.css.map */
