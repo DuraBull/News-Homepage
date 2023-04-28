@@ -188,4 +188,151 @@ table {
 
 td, th {
   padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0rem 1rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.6rem;
+}
+
+hr {
+  border: 1px solid hsl(236, 13%, 42%);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  width: 45px;
+  height: 28px;
+  margin: auto 0;
+}
+
+.ham-toggle {
+  position: relative;
+  z-index: 100;
+  background: url("../images/icon-menu.svg") no-repeat center;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-items {
+  background: hsl(36, 100%, 99%);
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  position: fixed;
+  z-index: 90;
+  right: -200%;
+  top: 0;
+  width: 70vw;
+  height: 100vh;
+  padding: 9rem 1.5rem;
+  list-style: none;
+  box-shadow: 0 0 100vw black;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.hero {
+  background: no-repeat url("../images/image-web-3-mobile.jpg") 0/100%;
+  min-width: 280px;
+  max-width: 686px;
+  min-height: 300px;
+  max-height: 600px;
+}
+
+.title {
+  padding-top: 0.3rem;
+}
+
+.new {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  background: hsl(240, 100%, 5%);
+  padding: 1.5rem;
+}
+.new h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.new-art {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: hsl(36, 100%, 99%);
+}
+.new-art h3 {
+  font-size: 1.2rem;
+}
+.new-art p {
+  color: hsl(233, 8%, 79%);
+}
+
+.top-articles {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.art {
+  display: flex;
+  gap: 1.5rem;
+}
+.art img {
+  width: 100px;
+  height: 120px;
+}
+
+.top-art-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.top-art-wrap h2 {
+  color: hsl(233, 8%, 79%);
+  font-size: 1.8rem;
+}
+.top-art-wrap h3 {
+  font-weight: 800;
+}
+
+.btn {
+  background: hsl(5, 85%, 63%);
+  padding: 0.9rem 2rem;
+  border: none;
+  margin: 1.6rem 0 2.8rem;
+}
+.btn a {
+  text-decoration: none;
+  color: hsl(36, 100%, 99%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 5px;
 }/*# sourceMappingURL=main.css.map */
