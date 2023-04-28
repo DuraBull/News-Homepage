@@ -216,6 +216,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:active {
+  pointer-events: none;
+}
 
 hr {
   border: 1px solid hsl(236, 13%, 42%);
