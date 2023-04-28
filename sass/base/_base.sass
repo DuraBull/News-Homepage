@@ -1,4 +1,8 @@
 body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    justify-content: center
     font-family: "Inter", sans-serif
     font-weight: $font-regular
     font-size: 15px
@@ -6,12 +10,16 @@ body
 
 h1
     font-weight: $font-extra
-    font-size: 2.5rem
-    line-height: 2.5rem
+    font-size: clamp(2.5rem, 5vw, 3.5rem)
+    line-height: clamp(2.5rem, 5vw, 3.5rem)
 
 p
     color: $dark-grayish-blue
-    line-height: 1.6rem
+    line-height: 1.5rem
+
+a
+    text-decoration: none
+    color: inherit
 
 hr
     border: 1px solid $dark-grayish-blue

@@ -2,7 +2,9 @@
     background: $soft-red
     padding: .9rem 2rem
     border: none
-    margin: 1.6rem 0 2.8rem
+    margin: clamp(1.6rem, 8vw, 2.25rem) 0 2.8rem
+    &:hover
+        background: $vdark-blue
     a
         text-decoration: none
         color: $off-white
