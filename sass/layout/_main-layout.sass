@@ -17,6 +17,10 @@
     background: url("../images/icon-menu.svg") no-repeat center
     width: 50px
     height: 50px
+    &.open
+        position: fixed
+        right: 1rem
+        background: url("../images/icon-menu-close.svg") no-repeat center
 
 .nav-items
     background: $off-white
@@ -34,6 +38,9 @@
     padding: 9rem 1.5rem
     list-style: none
     box-shadow: 0 0 100vw black
+    &.open
+        transition: 300ms
+        right: 0
     
 
 .grid

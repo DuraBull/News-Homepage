@@ -246,6 +246,11 @@ hr {
   width: 50px;
   height: 50px;
 }
+.ham-toggle.open {
+  position: fixed;
+  right: 1rem;
+  background: url("../images/icon-menu-close.svg") no-repeat center;
+}
 
 .nav-items {
   background: hsl(36, 100%, 99%);
@@ -263,6 +268,10 @@ hr {
   padding: 9rem 1.5rem;
   list-style: none;
   box-shadow: 0 0 100vw black;
+}
+.nav-items.open {
+  transition: 300ms;
+  right: 0;
 }
 
 .grid {
